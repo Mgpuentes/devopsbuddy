@@ -18,6 +18,10 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+
+    //webjars
+    implementation 'org.webjars:bootstrap:4.3.1'
+    implementation 'org.webjars:jquery:3.4.1'
 }
 
 test {
