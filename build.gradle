@@ -15,13 +15,14 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
 
     //webjars
-    implementation 'org.webjars:bootstrap:4.3.1'
-    implementation 'org.webjars:jquery:3.4.1'
+    implementation 'org.webjars:bootstrap:3.3.6'
+    implementation 'org.webjars:jquery:2.1.4'
 
     // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
     testCompile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
