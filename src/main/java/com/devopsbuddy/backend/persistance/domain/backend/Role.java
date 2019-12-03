@@ -1,5 +1,7 @@
 package com.devopsbuddy.backend.persistance.domain.backend;
 
+import com.devopsbuddy.enums.RolesEnum;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
@@ -13,7 +15,7 @@ public class Role implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    private long id;
+    private int id;
 
     private String name;
 
@@ -23,11 +25,20 @@ public class Role implements Serializable {
     public Role() {
     }
 
-    public long getId() {
+    /**
+     * Full constructor.
+     * @param rolesEnum
+     */
+    public Role(RolesEnum rolesEnum) {
+        this.id = rolesEnum.getId();
+        this.name = rolesEnum.getRoleName();
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
